@@ -1,0 +1,51 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <div id="index_header"><h1>All Pages</h1></div>
+    <hr style="height: 30px;">
+
+
+    <div class="list_container">
+    {% for entry in entries %}
+    <a href="{% url 'show' entry %}"><div class="card" style="width: 12rem; height: 8rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ entry }}</h5>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+    </div>
+
+
+    <style>
+        #index_header{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .list_container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .card{
+            color: black;
+            background-color: #96a455;
+            margin:0 20px 20px 10px;
+        }
+
+        .card-body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+
+    </style>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search Result
+{% endblock %}
+
+{% block body %}
+    <h1>Possible Result</h1>
+    <div class="list_container">
+        {% for entry in entries %}
+        <a href="{% url 'show' entry %}"><div class="card" style="width: 12rem; height: 8rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ entry }}</h5>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+    </div>
+    
+
+    <style>
+
+        .list_container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        
+        .card{
+            color: antiquewhite;
+            background-color: rgb(24, 21, 21);
+            margin: 0 20px;
+        }
+    </style>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 # Wiki-
 This is Wiki Project, just inspired by the Wikipedia. <br>
-In this web app anyone can create or modified the file. <br>
+In this web app anyone can create or edit the file. <br> 
 You can check out the Live Preview. <a href="https://wiki.adityachaudhary3.repl.co/">Click here.<a> <br>
 
 # Looking in the Wiki.
